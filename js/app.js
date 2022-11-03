@@ -7,7 +7,12 @@ class Book {
     this.editorial = editorial;
     this.pages = pages;
   }
-  //setter: propiedad conmutada
+  //getter y setter: propiedad conmutada
+  get showTitles() {
+     return this.title;
+  }
+
+  
   set modifyTitle(newTitle) {
     this.title = newTitle;
   }
@@ -41,7 +46,7 @@ console.log(books);
 
 //funciones declarativas
 
-/* function addBook() {
+function addBook() {
   let isbn = prompt("Ingrese el ISBN del libro");
   if (!isbn) {
     return console.warn("El ISBN es obligatorio");
@@ -73,7 +78,7 @@ console.log(books);
   books.push(book);
   alert("Libro guardado");
 }
- */
+
 //buscar o validar libro por ISBN
 function searchISBN(isbn) {
   let isBook = books.find(function (book) {
@@ -147,7 +152,7 @@ console.log(viewForPagesMayor(250, true));
 
 //Eliminar un libro por su ISBN
 
-/* const deleteBook = (isbn) => {
+const deleteBook = (isbn) => {
   const index = books.findIndex((book) => {
     return book.isbn === isbn;
   });
@@ -163,7 +168,9 @@ console.log(viewForPagesMayor(250, true));
   }
 };
 
-deleteBook("dasdasdas"); */
+deleteBook("dasdasdas");
+
+
 
 console.log(books);
 
